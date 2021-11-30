@@ -1,0 +1,81 @@
+h1 {
+    color:green;
+    opacity: 0;
+    transform: opacity 230s ease-in-out;
+}
+
+h1:hover {
+    opacity: 1;
+}
+
+.border-img {
+    border: 20px solid black;
+    padding: 20px;
+    border-image: url(waterfall.jpeg) 30 round;
+}
+
+.flex-1 {
+    height: 120px;
+    width: 120px;
+    background-color: burlywood;
+}
+
+.flex-2 {
+    height: 120px;
+    width: 120px;
+    background-color: plum;
+}
+
+.flex-3 {
+    height: 120px;
+    width: 120px;
+    background-color: palegreen; 
+}
+
+#flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@keyframes mySpinner {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.positioning {
+    background-color: pink;
+}
+
+#one {
+    background-color: blueviolet;
+}
+
+#two {
+    background-color: cadetblue;
+}
+
+#three {
+    background-color: cyan;
+}
+
+
+.box {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 50px;
+    border: 10px solid black;
+    background-color: aqua;
+    animation: mySpinner 6s;
+    animation-iteration-count: infinite;
+    border-radius: 25px;
+}
