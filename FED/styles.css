@@ -15,27 +15,27 @@ h1:hover {
 }
 
 .flex-1 {
-    height: 40px;
-    width: 40px;
+    height: 120px;
+    width: 120px;
     background-color: burlywood;
 }
 
 .flex-2 {
-    height: 40px;
-    width: 40px;
+    height: 120px;
+    width: 120px;
     background-color: plum;
 }
 
 .flex-3 {
-    height: 40px;
-    width: 40px;
+    height: 120px;
+    width: 120px;
     background-color: palegreen; 
 }
 
 #flex-box {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
@@ -51,6 +51,21 @@ h1:hover {
     }
 }
 
+.positioning {
+    background-color: pink;
+}
+
+#one {
+    background-color: blueviolet;
+}
+
+#two {
+    background-color: cadetblue;
+}
+
+#three {
+    background-color: cyan;
+}
 
 
 .box {
