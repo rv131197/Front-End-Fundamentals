@@ -1,18 +1,25 @@
-const btn = document.querySelector('#change')
-const div = document.querySelector('#container')
 
-btn.addEventListener('click', function(e){
-    div.style.backgroundColor = makeRandColor();
-    e.stopPropagation();
-})
 
-div.addEventListener('click', function(){
-    div.classList.toggle('hide');
-})
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'red';
+}, 1000)
 
-const makeRandColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    return `rgb(${r}, ${g}, ${b})`
-}
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'green';
+}, 2000)
+
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'blue';
+}, 3000)
+
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'yellow';
+}, 4000)
+
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'pink';
+}, 5000)
+
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'brown';
+}, 6000)
