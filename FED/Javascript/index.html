@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Validation</title>
+    <title>Chat App</title>
     <script  defer src='app.js'></script>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="scripts.js"></script>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      #message-container{
+        width: 80%;
+        max-width: 1200px;
+      }
+
+      #message-container div{
+        background-color: #CCC;
+        padding: 5px;
+      }
+
+      #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+
+    #send-container{
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80px;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+    </style>
 </head>
 <body>
-    <div id="error"></div>
-<form id="form" action="/" method="GET">
-  <div>
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" required>
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-  </div>
-  <button type="submit">Submit</button>
-</form>
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input type="text" id="message-text" name="message-input" />
+    <button id="send-button" type="submit">Submit</button>
+  </form>
 </body>
 </html>
