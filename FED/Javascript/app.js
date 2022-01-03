@@ -1,28 +1,28 @@
+const name = document.getElementById('name')
+const password = document.getElementById('password')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
 
-const fakeRequest = url => {
-    const rand = Math.random();
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            if(rand<0.7){
-                resolve('HURRRAYYY!!')
-            }
-                reject("YYAAYYA, NOOOn WRINGGG!!")
-        }, 1000)
-    })
-}
+form.addEventListener('submit', (e) => {
+  let messages = []
+  if (name.value === '' || name.value == null) {
+    messages.push('Name is required')
+  }
 
-fakeRequest('dogs/1')
-.then((data) => {
-    console.log('DONEEE!!!')
-    console.log(data)
+  if (password.value.length <= 6) {
+    messages.push('Password must be longer than 6 characters')
+  }
+
+  if (password.value.length >= 20) {
+    messages.push('Password must be less than 20 characters')
+  }
+
+  if (password.value === 'password') {
+    messages.push('Password cannot be password')
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault()
+    errorElement.innerText = messages.join(', ')
+  }
 })
-.catch((err)=>{
-    console.log(err)
-})
-
-
-
-
-
-
-
