@@ -3,50 +3,49 @@
 <head>
     <title>Chat App</title>
     <script  defer src='app.js'></script>
-    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script defer src="scripts.js"></script>
     <style>
       body{
-        margin: 0;
+        margin-left: 200px;
         padding: 0;
         display: flex;
-        justify-content: center;
+        background-color: thistle;
       }
 
-      #message-container{
-        width: 80%;
-        max-width: 1200px;
+      #message1, #message2, #message3, #message4{
+        max-width: 290px;
+        background-color: wheat;
+        padding: 20px;
       }
 
-      #message-container div{
-        background-color: #CCC;
-        padding: 5px;
+      #message1, #message3{
+        position: relative;
+        margin-left: 550px;
       }
 
-      #message-container div:nth-child(2n) {
-      background-color: #FFF;
-    }
-
-    #send-container{
-      position: fixed;
-      padding-bottom: 30px;
-      bottom: 0;
-      background-color: white;
-      max-width: 1200px;
-      width: 80px;
-      display: flex;
-    }
-
-    #message-input {
-      flex-grow: 1;
-    }
+      #message2, #message4{
+        position: relative;
+        margin-right: 550px;
+      }
     </style>
 </head>
 <body>
-  <div id="message-container"></div>
-  <form id="send-container">
-    <input type="text" id="message-text" name="message-input" />
-    <button id="send-button" type="submit">Submit</button>
-  </form>
+  <div id="container">
+    <h1 id="message1">
+      Hai! How are you??
+      Good to se you after a long time!!!
+    </h1>
+    <h1  id="message2">
+      Heyyy! Haii!!
+      I'm good!! Thank you...!! How about you?????
+    </h1>
+    <h1  id="message3">
+      Good to know..!! It was nice talking to you :)
+      Cya.. Take care!! Bye..!!
+    </h1>
+    <h1  id="message4">
+      Sure.. Take care..!! Ba Bye..!!!
+    </h1>
+
+  </div>
 </body>
 </html>
